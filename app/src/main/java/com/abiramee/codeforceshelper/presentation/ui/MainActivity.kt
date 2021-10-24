@@ -6,18 +6,26 @@ import androidx.activity.compose.setContent
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
+import androidx.compose.material.darkColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.abiramee.codeforceshelper.presentation.theme.CodeforcesHelperTheme
+import com.abiramee.codeforceshelper.presentation.theme.DarkBackgroundColor
+import com.abiramee.codeforceshelper.presentation.ui.solve_list.SolvedListScreen
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
         setContent {
             CodeforcesHelperTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
+                Surface(color = DarkBackgroundColor) {
+                    SolvedListScreen()
                 }
             }
         }
@@ -33,6 +41,9 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     CodeforcesHelperTheme {
-        Greeting("Android")
+        // A surface container using the 'background' color from the theme
+        Surface(color = DarkBackgroundColor) {
+            SolvedListScreen()
+        }
     }
 }

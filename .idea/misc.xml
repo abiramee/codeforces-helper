@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/compose-model-1635009560821.xml" value="0.25" />
+        <entry key="../../../../layout/compose-model-1635012066581.xml" value="0.33" />
+        <entry key="../../../../layout/compose-model-1635012335331.xml" value="0.25" />
+        <entry key="../../../../layout/compose-model-1635051238764.xml" value="0.3247466216216216" />
+        <entry key="../../../../layout/compose-model-1635052077880.xml" value="0.3247466216216216" />
+        <entry key="../../../../layout/compose-model-1635057167431.xml" value="0.3247466216216216" />
+        <entry key="../../../../layout/compose-model-1635058518334.xml" value="0.1" />
+        <entry key="../../../../layout/compose-model-1635060454763.xml" value="0.19214527027027026" />
+        <entry key="../../../../layout/compose-model-1635063033796.xml" value="0.27685185185185185" />
+        <entry key="../../../../layout/compose-model-1635069953773.xml" value="0.275" />
+        <entry key="../../../../layout/compose-model-1635070660552.xml" value="0.3247466216216216" />
+        <entry key="../../../../layout/compose-model-1635074101476.xml" value="0.3247466216216216" />
+        <entry key="../../../../layout/compose-model-1635074354128.xml" value="0.67" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.175" />
+        <entry key="app/src/main/res/drawable/empty_illustration.xml" value="0.3880208333333333" />
+        <entry key="app/src/main/res/drawable/no_internet_illustration.xml" value="0.3880208333333333" />
+        <entry key="app/src/main/res/font/ubunto_mono.xml" value="0.40208333333333335" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

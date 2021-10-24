@@ -1,4 +1,4 @@
-package com.abiramee.cryptolist.common
+package com.abiramee.codeforceshelper.common
 
 
 sealed class Resource<T>(val data: T? = null, val message: String? = null) {
