@@ -3,11 +3,13 @@ package com.abiramee.codeforceshelper.di
 import android.content.Context
 import com.abiramee.codeforceshelper.data.remote.dto.CodeForcesApi
 import com.abiramee.codeforceshelper.common.Constants
+import com.abiramee.codeforceshelper.common.DataStorePreference
 import com.abiramee.codeforceshelper.data.repository.SolvedListRepository
 import com.abiramee.codeforceshelper.domain.repository.SolvedListRepositoryImp
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -18,6 +20,13 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+
+    @Provides
+    @Singleton
+    fun providePreference(@ApplicationContext context: Context): DataStorePreference {
+        return DataStorePreference(context)
+    }
+
     @Provides
     @Singleton
     fun provideCodeforcesApi(): CodeForcesApi {

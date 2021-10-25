@@ -37,16 +37,15 @@ import com.abiramee.codeforceshelper.presentation.ui.solve_list.component.InfoBo
 import com.abiramee.codeforceshelper.presentation.ui.solve_list.component.NoInternetComponent
 import com.abiramee.codeforceshelper.presentation.ui.solve_list.component.SolvedListItem
 
-@ExperimentalAnimationApi
 @Composable
 fun SolvedListScreen(viewModel: SolvedListViewModel = hiltViewModel()) {
+
     Box(
         modifier = Modifier
             .background(DarkBackgroundColor)
             .fillMaxSize()
     ) {
         val state = viewModel.state.value
-        var itemNum by remember { mutableStateOf(0) }
 
         if (state.isLoading) {
             CircularProgressIndicator(
@@ -83,18 +82,8 @@ fun SolvedListScreen(viewModel: SolvedListViewModel = hiltViewModel()) {
                     }
                 }
                 state.data.let { result ->
-                    itemsIndexed(result.acceptedList) { i, item ->
-                        AnimatedVisibility(
-                            visible = true,
-                            enter = expandVertically(),
-                            exit = shrinkVertically(
-                                animationSpec = tween(
-                                    durationMillis = 1000,
-                                )
-                            )
-                        ) {
+                    items(result.acceptedList) { item ->
                             SolvedListItem(item);
-                        }
                     }
 
                     if (result.acceptedList.isEmpty()) {

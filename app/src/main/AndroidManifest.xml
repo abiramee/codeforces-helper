@@ -13,10 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeforcesHelper">
         <activity
+            android:name=".presentation.ui.HaveUserNameActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CodeforcesHelper.NoActionBar" />
+
+        <activity
             android:name=".presentation.ui.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.CodeforcesHelper.NoActionBar"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CodeforcesHelper.NoActionBar" />
 
         <activity
             android:name=".presentation.ui.SplashActivity"

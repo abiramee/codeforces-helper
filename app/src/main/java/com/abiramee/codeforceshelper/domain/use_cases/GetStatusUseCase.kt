@@ -10,10 +10,10 @@ import java.io.IOException
 import javax.inject.Inject
 
 class GetStatusUseCase @Inject constructor(private val repository: SolvedListRepositoryImp){
-    operator fun invoke() : Flow<Resource<Status>> = flow {
+    operator fun invoke(username: String) : Flow<Resource<Status>> = flow {
         try {
             emit(Resource.Loading<Status>())
-            val status = repository.getStatus().toStatus();
+            val status = repository.getStatus(username).toStatus();
             emit(Resource.Success<Status>(status))
         } catch (e: HttpException) {
             emit(Resource.Error<Status>(message = "An unexpected Error occurred!"))
