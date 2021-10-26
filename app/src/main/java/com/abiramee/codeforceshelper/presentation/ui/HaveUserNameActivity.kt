@@ -1,5 +1,7 @@
 package com.abiramee.codeforceshelper.presentation.ui
 
+import android.appwidget.AppWidgetManager
+import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -48,8 +50,14 @@ class HaveUserNameActivity () : AppCompatActivity() {
         haveUserNameViewModel.checkUserState.observe(this, Observer { it ->
             it.getContentIfNotHandled()?.let { result ->
                 if (result == 1) {
+                    val intent = Intent(this, AppWidget::class.java)
+                    intent.action = "android.appwidget.action.APPWIDGET_UPDATE";
+                    val ids= AppWidgetManager.getInstance(application).getAppWidgetIds(
+                        ComponentName(application, AppWidget::class.java));
+                    intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS,ids);
+                    sendBroadcast(intent)
                     startActivity(Intent(this, MainActivity::class.java))
-                    finish()
+                    finish();
                 } else if (result == 2) {
                     Toast.makeText(this, "The username isn't Correct", Toast.LENGTH_LONG).show()
                 }

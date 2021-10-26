@@ -13,7 +13,7 @@ data class Problem(
     @SerializedName("points")
     val points: Int,
     @SerializedName("rating")
-    val rating: Int,
+    val rating: Int?,
     @SerializedName("tags")
     val tags: List<String>,
     @SerializedName("type")

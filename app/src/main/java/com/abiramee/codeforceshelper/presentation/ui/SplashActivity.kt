@@ -23,7 +23,7 @@ class SplashActivity : AppCompatActivity() {
 
         lifecycleScope.launch {
             delay(1000)
-            if (dataStorePreference.read(DataStorePreference.USER_NAME) != "default") {
+            if (dataStorePreference.readString(DataStorePreference.USER_NAME).isNotEmpty()) {
                 startActivity(Intent(this@SplashActivity, MainActivity::class.java))
             } else {
                 startActivity(Intent(this@SplashActivity, HaveUserNameActivity::class.java))

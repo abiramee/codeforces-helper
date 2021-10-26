@@ -15,7 +15,7 @@ private val DarkColorPalette = darkColors(
 )
 
 private val LightColorPalette = lightColors(
-    primary = Purple500,
+    primary = Purple200,
     primaryVariant = Purple700,
     secondary = Teal200
 
@@ -36,21 +36,12 @@ fun CodeforcesHelperTheme(
 ) {
 
     val systemUiController = rememberSystemUiController()
-    if(darkTheme){
         systemUiController.setSystemBarsColor(
-            color = Color.Transparent
+            color = DarkBackgroundColor
         )
-    }else{
-        systemUiController.setSystemBarsColor(
-            color = Color.White
-        )
-    }
 
-    val colors = if (darkTheme) {
-        DarkColorPalette
-    } else {
-        LightColorPalette
-    }
+
+    val colors = DarkColorPalette
 
     MaterialTheme(
         colors = colors,

@@ -28,4 +28,12 @@
     <style name="Theme.CodeforcesHelper.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.CodeforcesHelper.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.CodeforcesHelper.AppWidgetContainerParent" parent="@android:style/Theme.DeviceDefault">
+        <item name="appWidgetRadius">8dp</item>
+        <item name="appWidgetPadding">4dp</item>
+        <item name="appWidgetInnerRadius">4dp</item>
+    </style>
+
+    <style name="Theme.CodeforcesHelper.AppWidgetContainer" parent="Theme.CodeforcesHelper.AppWidgetContainerParent" />
 </resources>

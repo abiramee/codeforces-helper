@@ -59,8 +59,7 @@ fun SolvedListScreen(viewModel: SolvedListViewModel = hiltViewModel()) {
                 item() {
                     Row(
                         modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(20.dp, 20.dp),
+                            .fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
                         InfoBox(
@@ -110,13 +109,5 @@ fun SolvedListScreen(viewModel: SolvedListViewModel = hiltViewModel()) {
                 )
             }
         }
-
-
-//            Box (modifier = Modifier.padding(10.dp)) {
-//                Column {
-//                    GradientText(text = "13", modifier = Modifier.fillMaxSize())
-//                    Text(text = "Solved this Day")
-//                }
-//
     }
 }

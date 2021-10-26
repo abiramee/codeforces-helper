@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">CodeforcesHelper</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="solved_this_day">Solved This Day</string>
+    <string name="solved_this_month">Solved This Month</string>
+    <string name="codeforces_status">Codeforces Status</string>
 </resources>

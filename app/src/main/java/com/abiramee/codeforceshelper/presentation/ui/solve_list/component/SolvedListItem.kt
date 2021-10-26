@@ -5,6 +5,7 @@ import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -20,7 +21,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.abiramee.codeforceshelper.domain.model.AcceptedItem
+import com.abiramee.codeforceshelper.presentation.theme.CodeforcesHelperTheme
+import com.abiramee.codeforceshelper.presentation.theme.DarkBackgroundColor
 import com.abiramee.codeforceshelper.presentation.theme.UbuntuMonoFamily
+import com.abiramee.codeforceshelper.presentation.ui.solve_list.SolvedListScreen
 
 @Composable
 fun SolvedListItem(acceptedItem: AcceptedItem) {
@@ -31,7 +35,9 @@ fun SolvedListItem(acceptedItem: AcceptedItem) {
                 .background(Color(0xFF3A3B3C))
                 .animateContentSize(),
         ) {
-            Row( modifier = Modifier.fillMaxWidth().padding(10.dp, 8.dp),
+            Row( modifier = Modifier
+                .fillMaxWidth()
+                .padding(10.dp, 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically) {
                 Text(
@@ -39,7 +45,9 @@ fun SolvedListItem(acceptedItem: AcceptedItem) {
                     fontFamily = UbuntuMonoFamily,
                     fontWeight = FontWeight.Bold,
                     fontSize = 16.sp,
-                    modifier = Modifier.weight(3f).padding(10.dp, 0.dp),
+                    modifier = Modifier
+                        .weight(3f)
+                        .padding(10.dp, 0.dp),
                     color = Color.White,
                     textAlign = TextAlign.Start,
                 )
@@ -54,7 +62,9 @@ fun SolvedListItem(acceptedItem: AcceptedItem) {
                 )
             }
 
-            Row( modifier = Modifier.fillMaxWidth().padding(10.dp, 8.dp),
+            Row( modifier = Modifier
+                .fillMaxWidth()
+                .padding(10.dp, 8.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically) {
                 Text(
@@ -63,7 +73,9 @@ fun SolvedListItem(acceptedItem: AcceptedItem) {
                     fontWeight = FontWeight.Bold,
                     fontStyle = FontStyle.Italic,
                     fontSize = 14.sp,
-                    modifier = Modifier.weight(3f).padding(10.dp, 0.dp),
+                    modifier = Modifier
+                        .weight(3f)
+                        .padding(10.dp, 0.dp),
                     color = Color.White,
                     textAlign = TextAlign.Start,
                 )
@@ -78,5 +90,21 @@ fun SolvedListItem(acceptedItem: AcceptedItem) {
                 )
             }
         }
+    }
+}
+
+
+@Preview(showBackground = true)
+@Composable
+fun DefaultPreview() {
+    CodeforcesHelperTheme {
+        // A surface container using the 'background' color from the theme
+        SolvedListItem(
+            acceptedItem = AcceptedItem(
+                "A.Array Elimination",
+                "tags: bitmasks, math, number theory",
+                "*1300"
+            )
+        )
     }
 }
