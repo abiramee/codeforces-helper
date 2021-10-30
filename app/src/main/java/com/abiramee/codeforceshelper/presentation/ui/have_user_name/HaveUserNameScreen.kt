@@ -134,8 +134,8 @@ fun HaveUserNameScreen(
                             .background(
                                 brush = Brush.horizontalGradient(
                                     colors = listOf(
-                                        Color(0xFF504FC0),
-                                        Color(0xFF6C92F4)
+                                        Color(0xFF6C92F4),
+                                        Color(0xFF504FC0)
                                     )
                                 ),
                                 shape = RoundedCornerShape(100.dp)

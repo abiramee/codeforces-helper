@@ -31,7 +31,7 @@ fun InfoBox(count: Int, text: String, modifier: Modifier) {
             Text(
                 text = text,
                 color = Color.White,
-                fontSize = 20.sp,
+                fontSize = 18.sp,
                 fontFamily = UbuntuMonoFamily,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.fillMaxWidth(),

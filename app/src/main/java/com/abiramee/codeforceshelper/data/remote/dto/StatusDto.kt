@@ -38,7 +38,7 @@ data class StatusDto(
                 AcceptedItem(
                     "${it.problem.index}.${it.problem.name}",
                     "tags: " + it.problem.tags.joinToString(","),
-                    "*" + it.problem.rating ?: ""
+                    if (it.problem.rating == null) "*" else "*${it.problem.rating}"
                 )
             }
         )

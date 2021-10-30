@@ -47,13 +47,16 @@ class HaveUserNameActivity () : AppCompatActivity() {
             }
         }
 
+        val intent = Intent(this, AppWidget::class.java)
+        intent.action = "android.appwidget.action.APPWIDGET_UPDATE";
+        val ids= AppWidgetManager.getInstance(application).getAppWidgetIds(
+            ComponentName(application, AppWidget::class.java));
+        intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS,ids);
+
         haveUserNameViewModel.checkUserState.observe(this, Observer { it ->
             it.getContentIfNotHandled()?.let { result ->
                 if (result == 1) {
-                    val intent = Intent(this, AppWidget::class.java)
                     intent.action = "android.appwidget.action.APPWIDGET_UPDATE";
-                    val ids= AppWidgetManager.getInstance(application).getAppWidgetIds(
-                        ComponentName(application, AppWidget::class.java));
                     intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS,ids);
                     sendBroadcast(intent)
                     startActivity(Intent(this, MainActivity::class.java))
