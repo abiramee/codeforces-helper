@@ -2,6 +2,7 @@
 # Codeforces Helper 
 
 ![Preview](gif/preview.gif)
+
 Codeforces Helper always reminds you that how many problems you've solved in this month on Codeforces. Which would help you to keep the consistency than ever before
 
 Currently available on the Play store.
